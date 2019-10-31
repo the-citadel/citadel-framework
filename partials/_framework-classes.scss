@@ -1,0 +1,16 @@
+// Colors
+@each $name, $color in $citadel_colors {
+	.#{$name} {
+		color: $color;
+
+		&-bg {
+			background-color: $color;
+		}
+
+		@each $shade in $color_shades {
+			&-#{$shade} {
+				background-color: rgba($color, $shade / 100);
+			}
+		}
+	}
+}
