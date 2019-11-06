@@ -27,6 +27,16 @@
 	}
 }
 
+@mixin dropdown {
+	&:after {
+		content: "\f078";
+		margin-left: $size_1;
+		font-family: "Font Awesome 5 Free";
+		font-size: $size_4;
+		font-weight: 900;
+	}
+}
+
 @mixin flex {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -59,7 +69,6 @@
 	}
 	flex-grow: $size;
 }
-
 
 @mixin flex-left {
 	-webkit-box-pack: start;
