@@ -1,0 +1,14 @@
+.colors {
+	margin-bottom: 3rem;
+}
+
+.colors > div {
+	min-height: 15vw;
+	padding: 2rem;
+	flex: 1;
+}
+
+a[href="#top"] {
+	display: block;
+	width: fit-content;
+}
