@@ -8,13 +8,13 @@
 		<link rel="stylesheet" href="styles/custom.css">
 	</head>
 	<body>
-		<header class="masthead">
+		<header id="masthead">
 			<div class="top-header">
-				<div class="wrapper">
-					<div class="left-header">
+				<div class="wrapper flex-container flex-between flex-middle">
+					<div class="left-col">
 
 					</div>
-					<div class="right-header">
+					<div class="right-col">
 						<nav class="secondary-nav" role="navigation" aria-label="secondary navigation">
 							<ul>
 								<li><a href="">Alumni</a></li>
@@ -23,7 +23,7 @@
 								<li><a href="">Students</a></li>
 								<li><a href="">Visitors</a></li>
 								<li><button class="search-toggle btn btn-sm">Search</button></li>
-								<li><button class="tools-toggle btn-clr btn-sm"><span>Tools</span></button></li>
+								<li><button class="tools-toggle btn-clr btn-sm"><span class="dropdown">Tools</span></button></li>
 							</ul>
 						</nav>
 					</div>
@@ -32,25 +32,25 @@
 			<div class="main-header">
 
 			</div>
+			<nav class="main-nav">
+				<div class="wrapper">
+					<ul>
+						<li class="has-submenu">
+							<a href="#">Link</a>
+							<ul class="submenu">
+								<li><a href="#">Submenu</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Link</a>
+							<ul class="submenu">
+								<li><a href="#">Submenu</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</header>
-		<nav class="main-nav">
-			<div class="wrapper">
-				<ul>
-					<li class="has-submenu">
-						<a href="#">Link</a>
-						<ul class="submenu">
-							<li><a href="#">Submenu</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Link</a>
-						<ul class="submenu">
-							<li><a href="#">Submenu</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</nav>
 		<main id="top">
 			<header class="entry-header">
 				<h1 class="wrapper">The Citadel Framework</h1>
@@ -60,9 +60,35 @@
 					<aside class="sidebar" role="complementary">
 						<nav>
 							<ul>
-								<li><a href="#headings">Headings</a></li>
-								<li><a href="#fonts">Fonts</a></li>
-								<li><a href="#colors">Colors</a></li>
+								<li>
+									<a href="#headings">Headings</a>
+								</li>
+								<li class="has-submenu">
+									<a href="#fonts">Fonts</a>
+									<ul class="submenu">
+										<li><a href="#">Submenu Link</a></li>
+										<li><a href="#">Submenu Link</a></li>
+										<li><a href="#">Submenu Link</a></li>
+										<li class="has-submenu">
+											<a href="#">Submenu Link</a>
+											<ul class="submenu">
+												<li><a href="#">Submenu Link</a></li>
+												<li><a href="#">Submenu Link</a></li>
+												<li><a href="#">Submenu Link</a></li>
+												<li><a href="#">Submenu Link</a></li>
+												<li><a href="#">Submenu Link</a></li>
+												<li><a href="#">Submenu Link</a></li>
+												<li><a href="#">Submenu Link</a></li>
+											</ul>
+										</li>
+										<li><a href="#">Submenu Link</a></li>
+										<li><a href="#">Submenu Link</a></li>
+										<li><a href="#">Submenu Link</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#colors">Colors</a>
+								</li>
 							</ul>
 						</nav>
 					</aside>
@@ -170,5 +196,10 @@
 				</div>
 			</div>
 		</main>
+		<footer id="colophon">
+
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="js/citadel-framework.js"></script>
 	</body>
 </html>

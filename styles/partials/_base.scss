@@ -8,7 +8,7 @@
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -23,21 +23,20 @@
 
 html {
 	font-size: $font__size_base;
-    box-sizing: border-box;
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    background-color: $color__background-body;
     color: $color__text-main;
     font-family: $font__body;
-    font-weight: 400;
     font-size: $font__size_base;
+    font-weight: 400;
     line-height: $font__line-height-body;
-    background-color: $color__background-body;
     margin: 0;
-	text-rendering: optimizeLegibility;
 	overflow-x: hidden;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 button,
@@ -45,9 +44,9 @@ input,
 select,
 optgroup,
 textarea {
+	background-color: $pt_barracks_20;
+	border: 1px solid $pt_barracks;
 	color: $color__text-main;
-    background-color: $pt_barracks_20;
-    border: 1px solid $pt_barracks;
 	font-family: $font__body;
 	font-weight: 400;
 	line-height: $font__line-height-body;
@@ -103,70 +102,71 @@ h3,
 h4,
 h5,
 h6 {
+	color: $citadel_navy;
     font-family: $font__heading;
     font-weight: 700;
 	line-height: $font__line-height-heading;
-    color: $citadel_navy;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
     font-size: $font__size_h1;
-    margin-top: $size_13;
     margin-bottom: $size_7;
+    margin-top: $size_13;
 }
 
 h2 {
     font-size: $font__size_h2;
-    margin-top: $font__size_h2;
     margin-bottom: $size_7;
+    margin-top: $font__size_h2;
 }
 
 h3 {
     font-size: $font__size_h3;
-    margin-top: $font__size_h3;
     margin-bottom: $size_7;
+    margin-top: $font__size_h3;
 }
 
 h4 {
     font-size: $font__size_h4;
-    margin-top: $font__size_h4;
     margin-bottom: $size_7;
+    margin-top: $font__size_h4;
 }
 
 h5 {
     font-size: $font__size_h5;
-    margin-top: $font__size_h5;
     margin-bottom: $size_7;
+    margin-top: $font__size_h5;
 }
 
 h6 {
     font-size: $font__size_h6;
-    margin-top: $font__size_h6;
     margin-bottom: $size_7;
+    margin-top: $font__size_h6;
 }
 
 p {
+	margin-top: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-    margin-top: 0;
 }
 
 a {
-    text-decoration: none;
     border-bottom: 1px solid $citadel_blue;
     color: $color__link;
+	text-decoration: none;
     @include element-transition(color, border-color);
 
     &:hover,
     &:focus {
+		border-bottom-color: transparent;
         color:$color__link-hover;
     }
 
     &:not([href]) {
+		border-bottom: none;
         color: inherit;
-        border-bottom: none;
         position: relative;
     }
 }
@@ -181,15 +181,15 @@ i {
 blockquote {
 
 	cite {
+		font-family: $font__heading;
 		font-size: $font__size-xs;
 		font-style: normal;
-		font-family: $font__heading;
 	}
 }
 
 pre {
-	font-size: $font__size-sm;
 	font-family: $font__pre;
+	font-size: $font__size-sm;
 	line-height: $font__line-height-body;
 	overflow: auto;
 }
@@ -198,8 +198,8 @@ code,
 kbd,
 tt,
 var {
-	font-size: $font__size-sm;
 	font-family: $font__code;
+	font-size: $font__size-sm;
 }
 
 abbr,
@@ -219,7 +219,7 @@ big {
 }
 
 nav {
-    
+
     ul {
         list-style: none;
         margin: 0;
